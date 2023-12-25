@@ -1,33 +1,5 @@
 import Link from "next/link";
-
-interface LinksItems {
-  href: string;
-  title: string;
-  subtitle: string;
-}
-
-const Links: LinksItems[] = [
-  {
-    href: "/",
-    title: "施工例",
-    subtitle: "施工一覧へ",
-  },
-  {
-    href: "/",
-    title: "会社概要",
-    subtitle: "会社概要へ",
-  },
-  {
-    href: "/",
-    title: "お問い合わせ",
-    subtitle: "お問い合わせへ",
-  },
-  {
-    href: "/coin",
-    title: "Coin",
-    subtitle: "ビットバンクAPI使用",
-  },
-];
+import Links from "./Links";
 
 export function Main() {
   return (

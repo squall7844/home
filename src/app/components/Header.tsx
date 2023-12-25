@@ -1,31 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import Links from "./Links";
 import { useState } from "react";
-
-interface HeaderItem {
-  href: string;
-  title: string;
-}
-
-const ITEMS: HeaderItem[] = [
-  {
-    href: "/",
-    title: "Index",
-  },
-  {
-    href: "/",
-    title: "施工例",
-  },
-  {
-    href: "/",
-    title: "会社概要",
-  },
-  {
-    href: "/",
-    title: "お問い合わせ",
-  },
-];
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -50,15 +27,15 @@ export function Header() {
               <Image src="/xmark-solid.svg" alt="menu" width={50} height={50} />
             </button>
           </li>
-          {ITEMS.map((item) => {
+          {Links.map((link) => {
             return (
               <li onClick={menuFunction} className="p-5 flex justify-center">
                 <Link
-                  key={item.href}
-                  href={item.href}
+                  key={link.href}
+                  href={link.href}
                   className="hover:text-blue-500 transform hover:scale-150"
                 >
-                  {item.title}
+                  {link.title}
                 </Link>
               </li>
             );
@@ -70,14 +47,14 @@ export function Header() {
       <div className=" flex h-32 text-xl font-bold justify-end ">
         <ul className="hidden absolute right-5 flex-initial jusify-end  border-b-2 border-black md:flex">
           <li className="mt-16 ">
-            {ITEMS.map((item) => {
+            {Links.map((link) => {
               return (
                 <Link
-                  key={item.href}
-                  href={item.href}
+                  key={link.href}
+                  href={link.href}
                   className="m-10 hover:text-blue-500"
                 >
-                  {item.title}
+                  {link.title}
                 </Link>
               );
             })}
