@@ -1,2 +1,30 @@
+# .gitignore for Next.js
+
+# Node.js
 node_modules
-.next/
+
+# next.js
+/.next/
+/out/
+
+# Production
+build
+out
+
+# Next.js Image Component
+.cache
+next.config.js
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
