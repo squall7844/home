@@ -6,9 +6,11 @@ import { useState } from "react";
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+
   const menuFunction = () => {
     setOpenMenu(!openMenu);
   };
+
   return (
     <nav>
       {/* ハンバーガーメニュー */}
@@ -21,43 +23,42 @@ export function Header() {
 
       {/* ハンバーガーメニューの一覧 */}
       {openMenu ? (
-        <ul className="absolute z-10 text-lg h-screen w-screen bg-white  md:hidden">
+        <ul className="absolute z-10 text-lg h-screen w-screen bg-white md:hidden">
           <li>
             <button onClick={menuFunction} className="absolute right-5 m-5">
               <Image src="/xmark-solid.svg" alt="menu" width={50} height={50} />
             </button>
           </li>
-          {Links.map((link) => {
-            return (
-              <li onClick={menuFunction} className="p-5 flex justify-center">
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="hover:text-blue-500 transform hover:scale-150"
-                >
-                  {link.title}
-                </Link>
-              </li>
-            );
-          })}
+          {Links.map((link) => (
+            <li
+              key={link.href}
+              onClick={menuFunction}
+              className="p-5 flex justify-center"
+            >
+              <Link
+                href={link.href}
+                className="hover:text-blue-500 transform hover:scale-150"
+              >
+                {link.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       ) : undefined}
 
       {/* 通常の表示 */}
-      <div className=" flex h-32 text-xl font-bold justify-end ">
+      <div className="flex h-32 text-xl font-bold justify-end ">
         <ul className="hidden absolute right-5 flex-initial justify-end  border-b-2 border-black md:flex">
           <li className="mt-16 ">
-            {Links.map((link) => {
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="m-10 hover:text-blue-500"
-                >
-                  {link.title}
-                </Link>
-              );
-            })}
+            {Links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="m-10 hover:text-blue-500"
+              >
+                {link.title}
+              </Link>
+            ))}
           </li>
         </ul>
       </div>
