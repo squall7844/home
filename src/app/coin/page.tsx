@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Price from "../components/Price";
-import { Main } from "../components/Main";
 import { Header } from "../components/Header";
 
 const Coin: React.FunctionComponent = () => {

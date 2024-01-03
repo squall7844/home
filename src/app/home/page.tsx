@@ -1,7 +1,10 @@
+import { Header } from "../components/Header";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="container">
+    <div>
+      <Header />
+      <div className="container ">
         <nav>
           <div className="tailet">私のポートフォリオ</div>
           <div>
