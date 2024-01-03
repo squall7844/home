@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Header } from "../components/Header";
 
 export default function bus() {
@@ -13,27 +14,23 @@ export default function bus() {
     if (selectedOption === "行き") {
       return (
         <ul>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
+          <Link
+            className="hover:text-red-700"
+            href="https://kuruken.jp/Approach?sid=d7cc23ed-2fab-401a-8ddb-e8620f337625&noribaChange=1"
+          >
+            くるけん 石内北小学校前
+          </Link>
         </ul>
       );
     } else if (selectedOption === "帰り") {
       return (
         <ul>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
-          <li>7:30</li>
+          <Link
+            className="hover:text-red-700"
+            href="https://kuruken.jp/Approach?sid=36468d12-cf5d-400e-812d-af2d671c342e&noribaChange=1"
+          >
+            くるけん 広島バスセンター
+          </Link>
         </ul>
       );
     } else {
@@ -42,10 +39,10 @@ export default function bus() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-blue-950 to-gray-800 text-white h-screen w-screen">
-      {/* Header のコンポーネントを適切にインポートしてください */}
+    <div className="bg-gradient-to-b from-blue-950 to-gray-800 text-white">
       <Header />
-      <main className="text-center font-bold text-5xl">
+
+      <main className="h-screen w-screen text-center font-bold text-5xl">
         <div>バス時刻一覧</div>
         <select
           className="m-10 p-3 bg-transparent focus:bg-gray-600 appearance-none text-center"

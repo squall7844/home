@@ -1,6 +1,4 @@
-{
-  /* レスポンシブわかるようにするやつ */
-}
+// レスポンシブわかるようにするやつ
 
 export function Response() {
   return (

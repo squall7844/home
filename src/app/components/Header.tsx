@@ -25,7 +25,7 @@ export function Header() {
 
       {/* ハンバーガーメニューの一覧 */}
       {openMenu ? (
-        <ul className=" z-10 fixed top-0 left-0  text-lg h-screen w-screen bg-white md:hidden">
+        <ul className=" z-10 fixed top-0 left-0  text-lg h-screen w-screen text-white bg-gray-900 md:hidden">
           <li>
             <button onClick={menuFunction} className="absolute right-5 m-5">
               <Image src="/xmark-solid.svg" alt="menu" width={50} height={50} />
