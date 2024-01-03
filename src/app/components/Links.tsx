@@ -1,3 +1,5 @@
+// リンク先を設定
+
 interface LinksItems {
   href: string;
   title: string;

@@ -19,7 +19,7 @@ const Coin: React.FunctionComponent = () => {
   return (
     <div>
       <Header />
-      <div className="flex">
+      <div className="flex justify-center ">
         <select
           name=""
           id="currency"
@@ -32,10 +32,8 @@ const Coin: React.FunctionComponent = () => {
           {/* 他の通貨のオプションを追加できます */}
         </select>
         <div>の価格</div>
+        <Price coins={selectedCurrency} />
       </div>
-      <Price coins={selectedCurrency} />
-      {/* 他の通貨やコンポーネントを追加できます */}
-      <Main />
     </div>
   );
 };
