@@ -38,16 +38,21 @@ export default function BusTime() {
 
   return (
     <main className="h-screen w-screen text-center font-bold text-3xl">
-      <div>バス時刻一覧</div>
       <select
-        className="m-10 p-3 bg-transparent focus:bg-gray-600 appearance-none text-center"
+        className="m-10 p-3 bg-gray-600 appearance-none "
         value={selectedOption}
         onChange={handleSelectChange}
       >
-        <option className="bg-green-600">select</option>
-        <option value="石内北">石内北→職場</option>
-        <option value="紙屋町">紙屋町→職場</option>
-        <option value="バスセンター">バスセンター→家</option>
+        <option className="bg-green-600 text-center ">行き先を選択</option>
+        <option className="text-center" value="石内北">
+          石内北 → 職場
+        </option>
+        <option className="text-center" value="紙屋町">
+          紙屋町 → 職場
+        </option>
+        <option className="text-center" value="バスセンター">
+          バスセンター → 家
+        </option>
       </select>
       {renderTime()}
     </main>
