@@ -3,7 +3,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Links from "./Links";
+import { Links } from "./Links";
 import { useState } from "react";
 
 export function Header() {
@@ -49,7 +49,7 @@ export function Header() {
       ) : undefined}
 
       {/* 通常の表示 */}
-      <div className="flex h-32 text-xl font-bold justify-end ">
+      <div className="flex h-16 text-xl font-bold justify-end ">
         <ul className="hidden absolute right-5 flex-initial justify-end  border-b-2 border-black md:flex">
           <li className="mt-16 ">
             {Links.map((link) => (
