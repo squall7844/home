@@ -9,7 +9,9 @@ export default function Bus() {
     <div className="bg-gradient-to-b from-blue-950 to-gray-800 text-white">
       <Header />
       <Response />
+      <div className="pt-20">
       <BusTime />
+      </div>
     </div>
   );
 }

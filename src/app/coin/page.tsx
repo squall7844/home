@@ -18,7 +18,7 @@ const Coin: React.FunctionComponent = () => {
   return (
     <div>
       <Header />
-      <div className="flex justify-center ">
+      <div className="flex justify-center pt-20">
         <select
           name=""
           id="currency"

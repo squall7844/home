@@ -20,7 +20,7 @@ const Pictures = () => {
           pagination={{
             clickable: true,
           }} //何枚目のスライドかを示すアイコン、スライドの下の方にある
-          navigation //スライドを前後させるためのボタン、スライドの左右にある
+          //navigation //スライドを前後させるためのボタン、スライドの左右にある
           loop={true}
           autoplay={{
             delay: 5000,
