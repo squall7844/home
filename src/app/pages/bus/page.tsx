@@ -18,7 +18,14 @@ export default function Bus() {
           </div>
         </div>
       ) : (
-        <div>ログインしてください</div>
+        <div>
+          <p>一時的に表示できるようになってます。</p>
+          <Header />
+          <Response />
+          <div className="pt-20">
+            <BusTime />
+          </div>
+        </div>
       )}
     </div>
   );
