@@ -28,11 +28,11 @@ export default function BusTime() {
   return (
     <main className="h-screen w-screen text-center font-bold text-3xl">
       <select
-        className="m-10 p-3 bg-gray-600 appearance-none "
+        className="m-10 p-3 bg-gray-600 appearance-none rounded-3xl"
         value={selectedOption}
         onChange={handleSelectChange}
       >
-        <option className="bg-green-600 ">行き先を選択</option>
+        <option className="bg-green-600">行き先を選択</option>
         {BusGo.map((bus) => (
           <option key={bus.name} value={bus.name}>
             {bus.name}

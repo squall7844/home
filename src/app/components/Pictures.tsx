@@ -36,8 +36,10 @@ const Pictures = () => {
                     src={src}
                     layout="responsive"
                     width={300}
-                    height={200}
+                    height={300}
                     alt="test画像"
+                    style={{ width: "auto" }}
+                    priority
                   />
                 </div>
               </SwiperSlide>

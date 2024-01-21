@@ -8,9 +8,10 @@ interface LinksItems {
 
 const Links: LinksItems[] = [
   { href: "/", title: "test", subtitle: "test" },
-  { href: "/bus", title: "バス", subtitle: "時刻表" },
-  { href: "/home", title: "ポートフォリオ", subtitle: "勉強用" },
-  { href: "/coin", title: "Coin", subtitle: "ビットバンクのAPI" },
+  { href: "/pages/bus", title: "バス", subtitle: "時刻表" },
+  { href: "/pages/home", title: "ポートフォリオ", subtitle: "勉強用" },
+  { href: "/pages/coin", title: "Coin", subtitle: "ビットバンクのAPI" },
+  { href: "/pages/auth/login", title: "LOGIN", subtitle: "ログイン" },
 ];
 
 interface BusGoItems {
