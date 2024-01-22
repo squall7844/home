@@ -1,7 +1,7 @@
 "use client";
 
 import { useAuth } from "@/context/auth";
-import { login, logout } from "@/components/Config";
+import { login, logout } from "@/components/Auth/Config";
 import { useState } from "react";
 
 export default function Home() {

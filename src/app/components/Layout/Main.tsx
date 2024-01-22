@@ -1,6 +1,5 @@
-// メイン
 import Link from "next/link";
-import { Links } from "./Links";
+import { Links } from "../Links";
 
 export function Main() {
   return (

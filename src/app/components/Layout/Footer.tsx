@@ -1,5 +1,3 @@
-// footer
-
 export function Footer() {
   return (
     <div className="text-white text-end text-4xl bg-black p-8">

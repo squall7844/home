@@ -1,9 +1,9 @@
 "use client";
-import BusTime from "@/components/BusTime";
-import { Header } from "@/components/Header";
+import { auth } from "@/components/Auth/lib/FirebaseConfig";
+import { Header } from "@/components/Layout/Header";
 import { Response } from "@/components/Response";
-import { auth } from "@/lib/FirebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
+import BusTime from "@/components/Bus/BusTime";
 
 export default function Bus() {
   const [user] = useAuthState(auth);

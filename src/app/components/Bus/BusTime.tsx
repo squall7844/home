@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import { BusGo } from "./Links";
+import { BusGo } from "../Links";
 
 export default function BusTime() {
   const [selectedOption, setSelectedOption] = useState<string>("");
