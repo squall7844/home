@@ -1,8 +1,9 @@
 "use client";
-
-import { useAuth } from "@/context/auth";
-import { login, logout } from "@/components/Auth/Config";
 import { useState } from "react";
+import Link from "next/link";
+import { useAuth } from "@/components/Auth/context/auth";
+import { login, logout } from "@/components/Auth/AuthConfig";
+import { Header } from "@/components/Layout/Header";
 
 export default function Home() {
   const user = useAuth();
@@ -17,12 +18,23 @@ export default function Home() {
       })
       .finally(() => {
         setWaiting(false);
+        
       });
   };
   return (
     <div>
-      {user === null && !waiting && <button onClick={signIn}>ログイン</button>}
-      {user && <button onClick={logout}>ログアウト</button>}
+      <Header />
+      <div className="text-center m-10 ">
+        <div>
+          {user === null && !waiting && (
+            <button className="bg-slate-600 text-white" onClick={signIn}>
+              ログイン
+            </button>
+          )}
+          {user && <button onClick={logout}>ログアウト</button>}
+        </div>
+        <Link href={"register"}>メールアドレスで新規登録</Link>
+      </div>
     </div>
   );
 }

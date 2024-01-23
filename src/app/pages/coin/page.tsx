@@ -1,8 +1,7 @@
 "use client";
-
 import React, { useState } from "react";
-import Price from "@/components/Coin/Price";
 import { Header } from "@/components/Layout/Header";
+import Price from "@/components/Coin/Price";
 
 const Coin: React.FunctionComponent = () => {
   const [selectedCurrency, setSelectedCurrency] = useState<string>("btc");

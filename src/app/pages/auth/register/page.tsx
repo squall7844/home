@@ -1,7 +1,6 @@
 "use client";
-
-import { getAuth, createUserWithEmailAndPassword, Auth } from "firebase/auth";
 import { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword, Auth } from "firebase/auth";
 
 interface RegisterProps {}
 

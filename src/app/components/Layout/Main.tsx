@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Links } from "../Links";
+import { Links } from "@/components/Links";
 
 export function Main() {
   return (

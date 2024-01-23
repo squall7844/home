@@ -6,6 +6,11 @@ interface LinksItems {
   subtitle: string;
 }
 
+interface BusGoItems {
+  href: string;
+  name: string;
+}
+
 const Links: LinksItems[] = [
   { href: "/", title: "test", subtitle: "test" },
   { href: "/pages/bus", title: "バス", subtitle: "時刻表" },
@@ -13,11 +18,6 @@ const Links: LinksItems[] = [
   { href: "/pages/coin", title: "Coin", subtitle: "ビットバンクのAPI" },
   { href: "/pages/auth/login", title: "LOGIN", subtitle: "ログイン" },
 ];
-
-interface BusGoItems {
-  href: string;
-  name: string;
-}
 
 const BusGo: BusGoItems[] = [
   {

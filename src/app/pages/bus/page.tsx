@@ -1,8 +1,8 @@
 "use client";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/components/Auth/lib/FirebaseConfig";
 import { Header } from "@/components/Layout/Header";
 import { Response } from "@/components/Response";
-import { useAuthState } from "react-firebase-hooks/auth";
 import BusTime from "@/components/Bus/BusTime";
 
 export default function Bus() {
@@ -18,13 +18,10 @@ export default function Bus() {
           </div>
         </div>
       ) : (
-        <div>
-          <p>一時的に表示できるようになってます。</p>
+        <div className="h-screen">
           <Header />
           <Response />
-          <div className="pt-20">
-            <BusTime />
-          </div>
+          <div className="pt-20 text-center text-2xl">ログインして下さい。</div>
         </div>
       )}
     </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { User, auth, db } from "@/lib/FirebaseConfig";
+import { User, auth, db } from "@/components/Auth/lib/FirebaseConfig";
 import { doc, getDoc, setDoc } from "@firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import {

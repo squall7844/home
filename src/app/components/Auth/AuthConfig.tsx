@@ -1,4 +1,4 @@
-import { auth } from "@/lib/FirebaseConfig";
+import { auth } from "@/components/Auth/lib/FirebaseConfig";
 import {
   GoogleAuthProvider,
   signInWithPopup,
