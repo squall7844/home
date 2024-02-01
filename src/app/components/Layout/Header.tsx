@@ -29,11 +29,7 @@ export function Header() {
             </button>
           </li>
           {Links.map((link) => (
-            <li
-              key={link.href}
-              onClick={menuFunction}
-              className="p-5 flex justify-center"
-            >
+            <li key={link.href} className="p-5 flex justify-center">
               <Link
                 href={link.href}
                 className="hover:text-blue-500 transform hover:scale-150"
@@ -53,7 +49,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="m-10 hover:text-blue-500"
+                className="mx-9 hover:text-blue-500"
               >
                 {link.title}
               </Link>

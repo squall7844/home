@@ -12,10 +12,11 @@ interface BusGoItems {
 }
 
 const Links: LinksItems[] = [
-  { href: "/", title: "test", subtitle: "test" },
+  { href: "/", title: "Home", subtitle: "メニュー" },
   { href: "/pages/bus", title: "バス", subtitle: "時刻表" },
   { href: "/pages/home", title: "ポートフォリオ", subtitle: "勉強用" },
   { href: "/pages/coin", title: "Coin", subtitle: "ビットバンクのAPI" },
+  { href: "/pages/todo", title: "ToDo", subtitle: "ToDoリスト" },
   { href: "/pages/auth/login", title: "LOGIN", subtitle: "ログイン" },
 ];
 

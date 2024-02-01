@@ -1,5 +1,6 @@
 "use client";
 import { Header } from "@/components/Layout/Header";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -27,7 +28,9 @@ export default function Home() {
             </button>
           </div>
         </section>
+        
       </div>
+      
     </div>
   );
 }
