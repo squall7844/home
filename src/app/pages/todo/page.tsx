@@ -1,8 +1,7 @@
-import React from "react";
+"use client";
 import TodoList from "@/components/Todo/TodoList";
 
-// Todoアプリの中身
-const Home = () => {
+const ToDo = () => {
   return (
     <div className="container mx-auto p-8 text-center max-w-2xl">
       <h1 className="text-2xl mb-4">Todo App</h1>
@@ -11,4 +10,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ToDo;
