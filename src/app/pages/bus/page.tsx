@@ -3,31 +3,28 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/components/Auth/lib/FirebaseConfig";
 import { Header } from "@/components/Layout/Header";
 import { Response } from "@/components/Response";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import BusTime from "@/components/Bus/BusTime";
-import Link from "next/link";
 
 export default function Bus() {
   const [user] = useAuthState(auth);
+  const router = useRouter();
+
+  useEffect(() => {
+    // ログインしていない場合にリダイレクト
+    if (!user) {
+      router.push("auth/login");
+    }
+  }, [user, router]);
+
   return (
     <div className="bg-gradient-to-b from-blue-950 to-gray-800 text-white">
-      {user ? (
-        <div>
-          <Header />
-          <Response />
-          <div className="pt-20">
-            <BusTime />
-          </div>
-        </div>
-      ) : (
-        <div className="h-screen">
-          <Header />
-          <Response />
-          <div className="pt-20 text-center text-2xl">
-            <div className="pb-32">ログインして下さい。</div>
-            <Link href={"auth/login"}>LOGIN</Link>
-          </div>
-        </div>
-      )}
+      <Header />
+      <Response />
+      <div className="pt-20">
+        <BusTime />
+      </div>
     </div>
   );
 }

@@ -1,9 +1,11 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { useAuth } from "@/components/Auth/context/auth";
 import { login, logout } from "@/components/Auth/AuthConfig";
 import { Header } from "@/components/Layout/Header";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   const user = useAuth();
@@ -18,22 +20,57 @@ export default function Home() {
       })
       .finally(() => {
         setWaiting(false);
-        
       });
   };
+
+  // ボタンのアニメーション設定
+  const buttonVariants = {
+    rest: {
+      scale: 1,
+      boxShadow: "0px 0px 0px 0px rgba(0,0,0,0)",
+    },
+    hover: {
+      scale: 1.1,
+      boxShadow: "0px 0px 20px 0px rgba(255,255,255,0.5)",
+    },
+  };
+
   return (
-    <div>
+    <div className="bg-gradient-to-b from-gray-800 to-black h-screen text-white">
       <Header />
-      <div className="text-center m-10 ">
-        <div>
-          {user === null && !waiting && (
-            <button className="bg-slate-600 text-white" onClick={signIn}>
-              ログイン
-            </button>
-          )}
-          {user && <button onClick={logout}>ログアウト</button>}
-        </div>
-        <Link href={"register"}>メールアドレスで新規登録</Link>
+      <div className="flex flex-col justify-center items-center pt-20">
+        {user === null && !waiting && (
+          <motion.button
+            variants={buttonVariants}
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+            className="bg-gradient-to-r from-pink-500 to-blue-500 text-white p-3 rounded-md transition"
+            onClick={signIn}
+          >
+            ログイン
+          </motion.button>
+        )}
+        {user && (
+          <motion.button
+            variants={buttonVariants}
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+            className="bg-gradient-to-r from-pink-500 to-blue-500 text-white p-3 rounded-md transition"
+            onClick={logout}
+          >
+            ログアウト
+          </motion.button>
+        )}
+
+        <Link
+          className="m-12 text-blue-400 hover:text-pink-400"
+          href={"register"}
+        >
+          メールアドレスで新規登録
+        </Link>
+        <Image src="/カエル.svg" width={200} height={200} alt="squall"></Image>
       </div>
     </div>
   );
