@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MiniPlyer() {
   return (
-    <div className="pt-16 relative flex justify-center items-center">
+    <div className="mt-16 relative flex justify-center items-center">
       <Image
         className="rounded-3xl"
         src="/背景.jpg"
