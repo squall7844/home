@@ -26,7 +26,7 @@ export default function BusTime() {
   return (
     <main className="h-screen w-screen text-center font-bold text-3xl">
       <select
-        className="mb-10 p-3 bg-gray-600 appearance-none rounded-2xl"
+        className="mt-10 mb-10 p-3 bg-gray-600 appearance-none rounded-2xl"
         value={selectedOption}
         onChange={handleSelectChange}
       >

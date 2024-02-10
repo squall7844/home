@@ -14,7 +14,7 @@ export default function MiniPlyer() {
         className="absolute flex justify-center items-center"
         width="200"
         height="140"
-        src="https://www.youtube.com/embed/playlist?list=PLAba57iCK96m2_jMuL9BDpRqup2Ilnail&showinfo=0"
+        src="https://www.youtube.com/embed/playlist?list=PLAba57iCK96m2_jMuL9BDpRqup2Ilnail"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
