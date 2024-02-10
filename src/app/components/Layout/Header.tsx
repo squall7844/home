@@ -49,7 +49,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="mx-9 hover:text-blue-500"
+                className="ml-7 hover:text-blue-500"
               >
                 {link.title}
               </Link>
