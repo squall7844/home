@@ -2,7 +2,7 @@
 import Image from "next/legacy/image";
 import { useState } from "react";
 
-export default function sample() {
+export default function Sample() {
   const [count, setCount] = useState(0);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

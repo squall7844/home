@@ -22,6 +22,9 @@ export default function Bus() {
     <div className="bg-gradient-to-b from-blue-950 to-gray-800 text-white">
       <Header />
       <Response />
+      <div>
+        <iframe width="320" height="180" src="https://www.youtube.com/embed/playlist?list=PLAba57iCK96m2_jMuL9BDpRqup2Ilnail"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+      </div>
       <div className="pt-20">
         <BusTime />
       </div>
