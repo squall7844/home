@@ -4,8 +4,8 @@ import { BusGo } from "@/components/Links";
 export default function BusTime() {
   const [selectedOption, setSelectedOption] = useState<string>("");
 
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOption(event.target.value);
+  const handleSelectChange = (value: string) => {
+    setSelectedOption(value);
   };
 
   const renderTime = () => {
@@ -28,7 +28,7 @@ export default function BusTime() {
       <select
         className="mb-10 p-3 bg-gray-600 appearance-none rounded-2xl"
         value={selectedOption}
-        onChange={handleSelectChange}
+        onChange={(e) => handleSelectChange(e.target.value)}
       >
         <option className="bg-green-600">行き先を選択</option>
         {BusGo.map((bus) => (
