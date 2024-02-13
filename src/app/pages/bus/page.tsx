@@ -28,7 +28,7 @@ export default function Bus() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-blue-950 to-gray-800 text-white">
+    <div className="bg-gradient-to-b from-gray-800 to-blue-950 text-white">
       <Header />
       <Response />
       <TopButton />

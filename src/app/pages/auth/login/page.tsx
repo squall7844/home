@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useAuth } from "@/components/Auth/context/auth";
-import { login, logout } from "@/components/Auth/AuthConfig";
+import { login, logout } from "@/components/Auth/lib/AuthConfig";
 import { Header } from "@/components/Layout/Header";
 import { motion } from "framer-motion";
 import Image from "next/image";
