@@ -28,6 +28,3 @@ Thumbs.db
 *.ntvs*
 *.njsproj
 *.sln
-
-
-.env.local
