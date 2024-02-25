@@ -21,12 +21,6 @@ export default function Bus() {
       router.push("auth/login");
     }
   }, [user, router]);
-
-  if (loading) {
-    return;
-    <div>Loading...</div>;
-  }
-
   return (
     <div className="bg-gradient-to-b from-gray-800 to-blue-950 text-white">
       <Header />
