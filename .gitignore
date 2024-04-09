@@ -1,3 +1,4 @@
+# Gitの管理外にする
 # .gitignore for Next.js
 
 # Node.js
@@ -29,5 +30,5 @@ Thumbs.db
 *.njsproj
 *.sln
 
-# .env.localファイルをGitの管理外にする
 .env.local
+.env
